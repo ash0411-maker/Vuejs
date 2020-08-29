@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+  }
+  
+  td {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .yes {
+    background-color: #90ee90
+  }
+  
+  .no {
+    background-color: #ff7f50
+  }
