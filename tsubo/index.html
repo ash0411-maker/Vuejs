@@ -7,35 +7,11 @@
     </head>
     <body>
 
-        <div id="example">
-            <p>Original message: "{{ message }}"</p>
-            <p>Computed reversed message: "{{ reversedMessage }}"</p>
+        <div id="app">
+            {{ price | number_format | unit }}
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-        <script src="main.js"></script>
+        <script src="vue.js"></script>
     </body>
 </html>
-
-
-
-
-<!-- フォームと入力の同期 -->
-<!-- <p>{{message}}</p>
-<input v-model="message"> -->
-
-
-<!-- 繰り返し処理 -->
-<!-- <ol>
-    <li v-for="item in list">{{item}}</li>
-</ol> -->
-
-
-<!-- クリックした時、選択要素が変わった時などのイベントを受け取る -->
-<!-- <button v:on:click="handleClick"></button> -->
-
-
-
-<!-- 関数
-<p>{{count}}回クリックした！</p>
-<button v-on:click="increment">カウントを増やす</button> -->
