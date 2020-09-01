@@ -5,19 +5,27 @@ Vue.filter('number_format', function(val) {
 var app = new Vue({
     el: '#app',
     data: {
-        width: window.innerWidth,
-        height: window.innerHeight
-    },
-    created: function(){
-        addEventListener("resize", this.resizeHandler);
-    },
-    beforeDestroy: function() {
-        removeEventListener("resize", this.resizeHandler);
+        stock: 10,
+        message: ""
     },
     methods: {
-        resizeHandler: function() {
-            this.width = $event.target.innerWidth;
-            this.height = $event.target.innerHeight;
+        onDeleteItem: function() {
+            this.stock--;
+        }
+    },
+    // watch: {
+    //     stock: function(newStock, oldStock) {
+    //         if(newStock == 0) {
+    //             this.message = "売り切れ";
+    //         }
+    //     }
+    // },
+    computed: {
+        statusMessage: function() {
+            if(this.stock <= 0) {
+                return "売り切れ";
+            }
+            return "";
         }
     }
 });
