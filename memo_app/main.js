@@ -103,9 +103,6 @@ var todo = new  Vue({
             deep: true
         }
     },
-    mounted: function() {
-
-    },
     methods: {
         addItem: function() {
             var item = {
