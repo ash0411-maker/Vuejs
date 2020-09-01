@@ -8,8 +8,10 @@
     <body>
 
         <div id="app">
-            <input type="text" v-model="year">
-            {{year}}年は{{isUrudoshi　? "閏年です"　:　"閏年ではありません"}}
+            <div v-show="show">
+                <p>now1: "{{ now1() }}"</p>
+                <p>now1: "{{ now2 }}"</p>
+            </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
