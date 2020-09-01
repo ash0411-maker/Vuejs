@@ -8,7 +8,8 @@
     <body>
 
         <div id="app">
-            {{ price | number_format | unit }}
+            <input type="text" v-model="year">
+            {{year}}年は{{isUrudoshi　? "閏年です"　:　"閏年ではありません"}}
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
