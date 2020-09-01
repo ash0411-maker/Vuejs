@@ -5,16 +5,19 @@ Vue.filter('number_format', function(val) {
 var app = new Vue({
     el: '#app',
     data: {
-        show: true
+        width: window.innerWidth,
+        height: window.innerHeight
+    },
+    created: function(){
+        addEventListener("resize", this.resizeHandler);
+    },
+    beforeDestroy: function() {
+        removeEventListener("resize", this.resizeHandler);
     },
     methods: {
-        now1 :function() {
-            return (new Date().toLocaleDateString());
-        }
-    },
-    computed: {
-        now2 :function() {
-            return (new Date().toLocaleDateString());
+        resizeHandler: function() {
+            this.width = $event.target.innerWidth;
+            this.height = $event.target.innerHeight;
         }
     }
 });
