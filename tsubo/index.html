@@ -8,13 +8,8 @@
     <body>
 
         <div id="app">
-            <p>当店のご利用頻度は？{{ answer }}</p>
-            <select v-model="answer">
-                <option disabled value="">選択肢ろ</option>
-                <option v-for="item in options" v-bind:value="item.label" v-bind:key="item.code">
-                    {{item.label}}
-                </option>
-            </select>
+            <p>ご希望到着日{{ arrival_date }}</p>
+            <input type="date" v-model="arrival_date" v-bind:min="min_date"></input>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
