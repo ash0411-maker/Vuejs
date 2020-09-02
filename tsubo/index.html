@@ -8,8 +8,8 @@
     <body>
 
         <div id="app">
-            <textarea v-on:input="ha"  v-model="message" name="" id="" cols="30" rows="10">{{message}}</textarea>
-            <pre>入力内容：{{message}}</pre>
+            <label>ケーキはお好きですか{{answer}}</label>
+            <input type="checkbox" id="cake" v-model="answer" true-value="はい" false-value="いいえ">
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
