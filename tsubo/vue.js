@@ -5,6 +5,11 @@ Vue.filter('number_format', function(val) {
 var app = new Vue({
     el: '#app',
     data: {
-        answer: "はい"
+        answer: []
+    },
+    computed: {
+        section: function() {
+            return this.answer.join()
+        }
     }
 });
