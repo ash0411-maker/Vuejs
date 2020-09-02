@@ -5,11 +5,11 @@ Vue.filter('number_format', function(val) {
 var app = new Vue({
     el: '#app',
     data: {
-        year: (new Date()).getFullYear()
+        message: "これは一方通行のバインディング"
     },
     methods: {
-        yearInputHolder: function($event) {
-            this.year = $event.target.value;
+        ha: function($event) {
+            this.message = $event.target.value;
         }
     }
 });

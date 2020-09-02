@@ -8,8 +8,8 @@
     <body>
 
         <div id="app">
-            <input type="text" v-on:input="yearInputHolder" v-bind:value="year">
-            {{year}}
+            <textarea v-on:input="ha"  v-model="message" name="" id="" cols="30" rows="10">{{message}}</textarea>
+            <pre>入力内容：{{message}}</pre>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
