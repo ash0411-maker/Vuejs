@@ -8,11 +8,8 @@
     <body>
 
         <div id="app">
-            <template　v-if="stock >= 1">
-                <span class="num">残り{{stock}}個</span>
-                <button class="btn" v-on:click="onDeleteItem">DELETE</button>
-            </template>
-            {{statusMessage}}
+            <input type="text" v-on:input="yearInputHolder" v-bind:value="year">
+            {{year}}
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
