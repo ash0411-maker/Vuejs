@@ -5,11 +5,11 @@ Vue.filter('number_format', function(val) {
 var app = new Vue({
     el: '#app',
     data: {
-        answer: []
+        category: []
     },
     computed: {
-        section: function() {
-            return this.answer.join()
+        selectedCategory: function() {
+            return this.category.length >= 1 ? this.category.join() : "" ;
         }
     }
 });

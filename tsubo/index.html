@@ -8,16 +8,13 @@
     <body>
 
         <div id="app">
-            <p>ご注文をお選びください：{{ section }}</p>
-            <label>
-                <input type="checkbox"　v-model="answer" value="ケーキ">ケーキ
-            </label>
-            <label>
-                <input type="checkbox"　v-model="answer" value="紅茶">紅茶
-            </label>
-            <label>
-                <input type="checkbox"　v-model="answer" value="クッキー">クッキー
-            </label>
+            <p>頻度は？：{{selectedCategory}}</p>
+            <select v-model="category"　multiple>
+                <option disabled value="">選べ</option>
+                <option value="宿泊費">宿泊費</option>
+                <option value="食費">食費</option>
+                <option value="交通費">交通費</option>
+            </select>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
