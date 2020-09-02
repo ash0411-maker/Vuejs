@@ -9,3 +9,19 @@
 .v-enter-active, .v-leave-active {
     transition :opacity 0.5s;
 }
+
+
+
+.slideInLeft-enter-active, .slideInLeft-leave-active {
+    transition: opacity 0.5s, transform 1s;
+}
+
+.slideInLeft-enter, .slideInLeft-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slideInLeft-enter-to, .slideInLeft-leave {
+    transform: translateX(0);
+}
+
