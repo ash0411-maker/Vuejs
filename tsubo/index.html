@@ -8,12 +8,12 @@
     <body>
 
         <div id="app">
-            <p>頻度は？：{{selectedCategory}}</p>
-            <select v-model="category"　multiple>
-                <option disabled value="">選べ</option>
-                <option value="宿泊費">宿泊費</option>
-                <option value="食費">食費</option>
-                <option value="交通費">交通費</option>
+            <p>当店のご利用頻度は？{{ answer }}</p>
+            <select v-model="answer">
+                <option disabled value="">選択肢ろ</option>
+                <option v-for="item in options" v-bind:value="item.label" v-bind:key="item.code">
+                    {{item.label}}
+                </option>
             </select>
         </div>
 
