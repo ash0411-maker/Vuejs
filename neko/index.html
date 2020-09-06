@@ -4,21 +4,14 @@
         <meta charset="utf-8">
         <title>Vue.js</title>
         <link rel="stylesheet" href="main.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
     </head>
     <body>
 
         <div id="app">
-            <input type="text" v-model="name" v-on:input="input">
-            <button v-on:click="add">モンスター追加</button>
-            <h1>追加しようとしているモンスター：{{ name }}</h1>
-
-            <ul>
-                <li v-for="(item, index) in list" v-bind:key="item.id">
-                    ID:{{item.id}} <br>  NAME:{{item.name}} <br>  HP:{{item.hp}}
-                    <spn v-if="item.hp < 50">瀕死だ！！！</spn>
-                    <button v-on:click="attack(index)">モンスターを倒す</button>
-                </li>
-            </ul>
+            <a v-bind:href="url" v-once>
+                HELLO, {{message}}
+            </a>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
