@@ -56,7 +56,7 @@
 //   }
 // });
 
-
+// http-server  を使う！！！
 var btnLoad = document.querySelector('#load');
 // 読み込みボタンのクリックイベントハンドラを定義
 btnLoad.addEventListener('click', function(event) {
