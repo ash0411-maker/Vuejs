@@ -8,8 +8,7 @@
     <body>
 
         <div id="app">
-            <my-product name="ケースA" price="980円"></my-product>
-            <my-product name="ケースB" price="1800円"></my-product>
+            <my-product v-on:child-click="priceDown" v-bind:price="price"></my-product>
         </div>
 
 
@@ -18,4 +17,6 @@
         <script src="main.js"></script>
     </body>
 </html>
+
+
 

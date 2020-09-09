@@ -1,15 +1,15 @@
 Vue.component('my-product', {
     template: `
-        <div>
-            <span>{{name}}</span>:<span>{{price}}</span>
-        </div>
-        `,
-    data: function() {
-        return {
-            name: 'スマホケース',
-            price: 980
+    <div>
+        <button v-on:click="clickHandler">値下げをする</button>{{price}}円
+    </div>
+    `,
+    props: ["price"],
+    methods: {
+        clickHandler: function() {
+            // 子コンポーネントにchild-clickイベントを発生させる
+            // 親のテンプレートを通じて親のイベントハンドラを呼び出すための仲介役
+            this.$emit("child-click");
         }
     }
-    // // propに定義したプロパティは親からデータを受け取るための入れ物
-    // props: ["name", "price"]
 });
