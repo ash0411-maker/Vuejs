@@ -1,7 +1,9 @@
-var app = new Vue({
+var scroll = new SmoothScroll()
+new Vue({
     el: '#app',
-    data: {
-        message: "ka",
-        url: "#"
+    methods: {
+        scrollTop: function () {
+        scroll.animateScroll(0)
+        }
     }
 })
