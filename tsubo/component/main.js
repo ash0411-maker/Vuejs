@@ -1,12 +1,10 @@
 var app = new Vue({
-    el: '#app',
-    data: {
-      name: "スマホケース",
-      price: 980
-    },
-    methods: {
-      priceDown: function() {
-        this.price -= 100
-      }
-    }
+  el: '#app',
+  data: {
+    products: [
+      {id: 1, name: "A", price: 129},
+      {id: 2, name: "B", price: 120},
+      {id: 3, name: "C", price: 10}
+    ]
+  }
 })

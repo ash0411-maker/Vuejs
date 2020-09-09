@@ -8,7 +8,11 @@
     <body>
 
         <div id="app">
-            <my-product v-on:child-click="priceDown" v-bind:price="price"></my-product>
+            <table>
+                <tbody>
+                    <tr is="my-row" v-for="item in products" v-bind="item" v-bind:key="item.id"></tr>
+                </tbody>
+            </table>
         </div>
 
 
