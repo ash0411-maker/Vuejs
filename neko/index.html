@@ -8,56 +8,17 @@
     </head>
     <body>
 
-        <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+
         <div id="app">
-        <div class="content">
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-            おjdjばvじゃksdvkじゃbsvじゃdbvじゃsbvkjばkjvb<br>
-        </div>
-        <div v-on:click="scrollTop">
-            ページ上部へ移動
-        </div>
+            <input v-model.number="budget">円以下に絞り込む
+            <input v-model.number="limit">件を表示
+            <p>{{ matched.length }}件中{{limited.length}}件を表示中</p>
+
+            <ul>
+                <li v-for="item in limited" v-bind:key="item.id">
+                    {{item.name}} ：　{{item.price}}円
+                </li>
+            </ul>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
