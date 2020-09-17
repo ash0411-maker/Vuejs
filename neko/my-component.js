@@ -13,10 +13,10 @@
 // }
 
 
-var myComponent = {
+var compChild = {
     template: `
-    <div>
-        <button v-on:click="clickHandler">イベント発火</button>狛江の{{num}}
+    <div class="comp-child">
+        <slot></slot>
     </div>
     `,
     props: ["num"],

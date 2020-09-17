@@ -1,7 +1,7 @@
 new Vue({
     el: '#app',
     components: {
-        "my-component" : myComponent
+        "comp-child" : compChild
     },
     data: {
         num: 1
