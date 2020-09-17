@@ -16,9 +16,9 @@
 // 子から親へ
 var myComponent = {
     template: `
-    <li>
-        {{name}}:HP{{hp}}
-    </li>
+    <button v-on:click="clickHandler">イベント発火</button>
     `,
-    props: ["name", "hp"]
+    clickHandler: function() {
+        this.$emit("child-click")
+    }
 };
