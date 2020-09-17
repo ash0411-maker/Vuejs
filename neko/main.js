@@ -4,7 +4,12 @@ new Vue({
         "my-component" : myComponent
     },
     data: {
-        message1: "能見さんが心配",
-        message2: "ホンマに頑張って"
+        win: 1
+    },
+    methods: {
+        // 子から呼び出されるメソッド
+        winning: function() {
+            this.win += 1;
+        }
     }
 })

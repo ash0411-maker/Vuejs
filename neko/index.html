@@ -10,7 +10,7 @@
 
 
         <div id="app">
-            <my-component v-bind:message1="message1" v-bind:message2="message2"></my-component>
+            <my-component v-on:child-click="winning" v-bind:win="win"></my-component>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
