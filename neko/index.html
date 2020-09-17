@@ -10,8 +10,13 @@
 
 
         <div id="app">
-            <my-component val="これは子A"></my-component>
-            <my-component val="これは子B"></my-component>
+            <ul>
+                <my-component v-for="item in list" 
+                v-bind:key="item.id"
+                v-bind:name="item.name"
+                v-bind:hp="item.hp">
+                </my-component>
+            </ul>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>

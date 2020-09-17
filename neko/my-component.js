@@ -16,9 +16,9 @@
 // 子から親へ
 var myComponent = {
     template: `
-    <div>
-        <p><comp-child>{{val}}</comp-child></p>
-    </div>
+    <li>
+        {{name}}:HP{{hp}}
+    </li>
     `,
-    props: ["val"]
+    props: ["name", "hp"]
 };
