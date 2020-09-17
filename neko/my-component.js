@@ -13,7 +13,7 @@
 //     }
 // }
 
-
+// 子から親へ
 var myComponent = {
     template: `
     <div>
