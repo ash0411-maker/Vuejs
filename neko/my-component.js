@@ -1,16 +1,10 @@
 var myComponent = {
     template: `
-    <p>My component</p>
+    <p>{{message}}</p>
     `,
-    props: ["win"],
-    methods: {
-        clickHandler: function() {
-            this.$emit("child-click")
+    data: function() {
+        return {
+            message: "Hello"
         }
     }
 }
-
-// Vue.component("my-component", {
-//     template: "<p>My component</p>"
-// })
-
