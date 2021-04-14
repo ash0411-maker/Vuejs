@@ -4,6 +4,7 @@ var app = new Vue({
       message: 'インスタンス2',
       name: 'ashketcham'
   },
+  // 1行のhtmlで使う？？？
   template: '<p>{{ message }}</p>'
 })
 
