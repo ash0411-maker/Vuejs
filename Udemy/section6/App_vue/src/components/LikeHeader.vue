@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 #LikeHeaderLocal {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   border: solid;

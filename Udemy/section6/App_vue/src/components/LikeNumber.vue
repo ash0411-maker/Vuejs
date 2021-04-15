@@ -18,7 +18,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 #LikeNumberGlobal {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   border: solid;
