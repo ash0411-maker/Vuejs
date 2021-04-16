@@ -2,8 +2,8 @@
   <div>
     <LikeHeaderLocal></LikeHeaderLocal>
     <p>いいね（{{ number }}）</p>
-    <LikeNumberGlobal :number_props="number"></LikeNumberGlobal>
-    <LikeNumberGlobal :number_props="number"></LikeNumberGlobal>
+    <LikeNumberGlobal :props-number="number"></LikeNumberGlobal>
+    <LikeNumberGlobal :props-number="number"></LikeNumberGlobal>
   </div>
 </template>
 

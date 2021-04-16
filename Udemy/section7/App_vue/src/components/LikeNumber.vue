@@ -1,16 +1,17 @@
 <template>
   <div id="LikeNumberGlobal">
     <h2>LikeNumberGlobal（どこでも使えるコンポーネント）</h2>
-    <p>いいね（{{number_props / 2}}）</p>
+    <p>全力いいね（{{ propsNumber }}）</p>
+    <p>半分いいね（{{ halfNumber }}）</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["number_props"],
-  data() { //ES6
-    return {
-      number: 5
+  props: ["propsNumber"],
+  computed: {
+    halfNumber() {
+      return this.propsNumber / 2;
     }
   }
 }
