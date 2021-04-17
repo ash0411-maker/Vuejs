@@ -1,7 +1,8 @@
 <template>
   <div id="LikeHeaderLocal">
     <div>
-      <slot></slot>
+      <slot name="title"></slot>
+      <slot name="like-number"></slot>
     </div>
   </div>
 </template>

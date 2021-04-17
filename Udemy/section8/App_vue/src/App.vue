@@ -1,8 +1,12 @@
 <template>
   <div>
     <LikeHeaderLocal>
-      <h1>トータルのいいね数<br>親から子へHTMLごとデータを渡す（slot）</h1>
-      <h2>いいね（{{ number }}）</h2>
+      <template v-slot:title>
+        <h2>こんにちは</h2>
+      </template>
+      <template v-slot:like-number>
+        <h2>{{ number }}</h2>
+      </template>
     </LikeHeaderLocal>
 
     <LikeNumberGlobal :props-number="number" v-on:emit-number="number = $event"></LikeNumberGlobal>
