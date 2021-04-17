@@ -1,7 +1,7 @@
 <template>
   <div id="LikeHeaderLocal">
     <div>
-      <slot name="title"></slot>
+      <slot name="title" v-bind:user="user"></slot>
       <slot name="like-number"></slot>
     </div>
   </div>
@@ -9,7 +9,14 @@
 
 <script>
 export default {
-  props: ["headerText"],
+  data() {
+    return {
+      user: {
+        fName: "Jack",
+        lName: "Potter"
+      }
+    }
+  }
 }
 </script>
 
