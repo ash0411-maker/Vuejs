@@ -2,7 +2,7 @@
   <div>
     <LikeHeaderLocal></LikeHeaderLocal>
     <p>いいね（{{ number }}）</p>
-    <LikeNumberGlobal :props-number="number"></LikeNumberGlobal>
+    <LikeNumberGlobal :props-number="number" v-on:emit-number="number = $event"></LikeNumberGlobal>
     <LikeNumberGlobal v-on:emit-number="number = $event"></LikeNumberGlobal>
   </div>
 </template>

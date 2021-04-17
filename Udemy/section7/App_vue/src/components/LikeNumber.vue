@@ -4,6 +4,7 @@
     <p>全力いいね（{{ propsNumber }}）</p>
     <p>半分いいね（{{ halfNumber }}）</p>
     <button @click="increment">増やす</button>
+    <button @click="emitIncrement">増やす（$emit）</button>
   </div>
 </template>
 
@@ -23,6 +24,10 @@ export default {
     }
   },
   methods: {
+    emitIncrement() {
+      this.$emit("emit-number", this.propsNumber + 1);
+      // this.$emit("渡すデータの名前", "渡すデータ自身");
+    },
     increment() {
       this.$emit("emit-number", this.propsNumber + 1);
       // this.$emit("渡すデータの名前", "渡すデータ自身");
