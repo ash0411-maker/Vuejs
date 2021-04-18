@@ -6,7 +6,9 @@
 
     <LikeNumberGlobal :props-number="number" v-on:emit-number="number = $event"></LikeNumberGlobal>
 
-    <component v-bind:is="currentComponent"></component>
+    <keep-alive>
+      <component v-bind:is="currentComponent"></component>
+    </keep-alive>
     <button @click="currentComponent = 'Home'">Home</button>
     <button @click="currentComponent = 'About'">About</button>
   </div>
