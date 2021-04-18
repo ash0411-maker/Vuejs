@@ -8,6 +8,14 @@
       v-model.lazy="eventData.title"
     >
     <p>インプット文字: {{eventData.title}}</p>
+
+    <label for="title">最大人数</label>
+    <input
+      type="number"
+      id="maxNumber"
+      v-model.number="eventData.maxNumber"
+    >
+    <p>インプット文字: {{ eventData.maxNumber} }</p>
   </div>
 </template>
 
@@ -19,7 +27,8 @@ export default {
     return {
       number: 10,
       eventData: {
-        title: ""
+        title: "",
+        maxNumber: 0
       }
     }
   }
