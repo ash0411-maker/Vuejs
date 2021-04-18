@@ -1,31 +1,33 @@
 <template>
   <div>
     <LikeHeaderLocal>
-      <template v-slot:title="slotProps">
-        <h2>こんにちは</h2>
-        <h2>{{slotProps}}</h2>
-      </template>
-      <template v-slot:like-number>
-        <h2>{{ number }}</h2>
-      </template>
+      <h2>こんにちは</h2>
     </LikeHeaderLocal>
 
     <LikeNumberGlobal :props-number="number" v-on:emit-number="number = $event"></LikeNumberGlobal>
-    <LikeNumberGlobal v-on:emit-number="number = $event"></LikeNumberGlobal>
+
+    <component v-bind:is="currentComponent"></component>
+    <button @click="currentComponent = 'Home'">Home</button>
+    <button @click="currentComponent = 'About'">About</button>
   </div>
 </template>
 
 <script>
 import LikeHeaderLocal from './components/LikeHeader.vue'
+import Home from './components/Home.vue'
+import About from './components/About.vue'
 
 export default {
   data() {
     return {
-      number: 10
+      number: 10,
+      currentComponent: "Home",
     }
   },
   components: {
-    LikeHeaderLocal
+    LikeHeaderLocal,
+    Home,
+    About
   }
 }
 </script>

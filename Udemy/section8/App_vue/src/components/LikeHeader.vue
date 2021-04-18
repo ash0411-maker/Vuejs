@@ -1,9 +1,6 @@
 <template>
   <div id="LikeHeaderLocal">
-    <div>
-      <slot name="title" v-bind:user="user"></slot>
-      <slot name="like-number"></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
