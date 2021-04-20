@@ -1,0 +1,47 @@
+body {
+    font-size: 16px;
+}
+
+.container {
+    width: 300px;
+    margin: auto;
+}
+
+#todo h1 {
+    font-size: 16px;
+    border-bottom: 1px solid green;
+    padding: 16px 0;
+}
+
+#todo ul {
+    padding: 0;
+    list-style: none;
+}
+
+#todo li {
+    line-height: 1.5;
+}
+
+#todo input[type="text"] {
+    padding: 2px;
+}
+
+#todo li > span.done {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.command {
+    cursor: pointer;
+    font-size: 12px;
+    color: blue;
+}
+
+.info {
+    font-size: 12px;
+    color: #bbb;
+}
+
+h1 button {
+    float: right;
+}

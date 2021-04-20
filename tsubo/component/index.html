@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue.js</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+
+        <div id="app">
+            <table>
+                <tbody>
+                    <tr is="my-row" v-for="item in products" v-bind="item" v-bind:key="item.id"></tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script src="show-hello.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
+
+
+

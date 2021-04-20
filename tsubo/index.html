@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue.js</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <!-- p.82 -->
+        <div id="app">
+            <button v-on:click="show = !show">表示を切り替える</button>
+            <transition>
+                <p v-if="show">
+                    吾輩はにゃー<br>
+                    どこ生まれ<br>
+                    何育ちか<br>
+                </p>
+            </transition>
+            <transition name="slideInLeft">
+                <p v-if="show">
+                    吾輩はにゃー<br>
+                    どこ生まれ<br>
+                    何育ちか<br>
+                </p>
+            </transition>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script src="vue.js"></script>
+    </body>
+</html>
