@@ -6,6 +6,7 @@
     <hr>
     <!-- $routerはnavigation $routeは情報が入っている -->
     <h1>USER NO. {{ id }}</h1>
+    <router-view></router-view>
   </div>
 </template>
 
