@@ -7,6 +7,11 @@
 
 <script>
 export default {
+  computed: {
+    count() {
+      return this.$store
+    }
+  },
   methods: {
     toUsers() {
       this.$router.push({
