@@ -14,7 +14,7 @@ export default new Router({
     { path: '/', component: Home },
     { path: '/users/:id',
       component: Users,
-      props: true,
+      props: true, //idを渡している
       children: [
         { path: "posts", component: UsersPosts},
         { path: "profile", component: UsersProfile},
