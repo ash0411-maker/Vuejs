@@ -10,7 +10,7 @@
     HOME
     </router-link>
     <router-link
-      to="/users"
+      to="/users/1"
       active-class="link--active"
       exact
       class="link"
