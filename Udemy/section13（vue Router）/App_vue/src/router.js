@@ -35,5 +35,9 @@ export default new Router({
         { path: "profile", component: UsersProfile, name: "users-profile"},
       ]
     },
+    {
+      path: "/hello",
+      redirect: "/"
+    }
   ]
 });
