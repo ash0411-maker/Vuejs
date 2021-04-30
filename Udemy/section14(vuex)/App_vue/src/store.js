@@ -11,6 +11,6 @@ export default new Vuex.Store({
     count: 2
   },
   getters: {
-    doubleCounter: state => state.count * 2
+    doubleCount: state => state.count * 2
   }
 })
