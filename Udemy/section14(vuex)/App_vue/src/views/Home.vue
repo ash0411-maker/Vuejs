@@ -3,6 +3,7 @@
     <h3>HOME</h3>
     <hr>
     <h2>Vuex: {{ doubleCount }}</h2>
+    <h2>Vuex: {{ tripleCount }}</h2>
   </div>
 </template>
 
@@ -15,7 +16,10 @@ export default {
   //     return this.$store.getters.doubleCounter;
   //   }
   // },
-  computed: mapGetters(["doubleCount"]),
+  // computed: mapGetters(["doubleCount", "tripleCount"]),
+  computed: {
+    ...mapGetters(["doubleCount", "tripleCount"])
+  },
   methods: {
     toUsers() {
       this.$router.push({
