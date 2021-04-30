@@ -18,20 +18,19 @@
     USERS
     </router-link>
 
-    <button @click="increment">+1</button>
+    <button @click="increment(1)">+1</button>
   </nav>
 </template>
 
 <script>
+import { mapMutations } from "vuex"
+
 export default {
   methods: {
-    increment() {
-      this.$store.commit("increment", 1);
-    }
+    ...mapMutations(["increment"])
   }
 }
 </script>
-
 
 <style scoped>
   .link {
