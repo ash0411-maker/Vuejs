@@ -11,12 +11,6 @@
 import { mapGetters } from "vuex"
 
 export default {
-  // computed: {
-  //   doubleCount() {
-  //     return this.$store.getters.doubleCounter;
-  //   }
-  // },
-  // computed: mapGetters(["doubleCount", "tripleCount"]),
   computed: {
     ...mapGetters(["doubleCount", "tripleCount"])
   },
