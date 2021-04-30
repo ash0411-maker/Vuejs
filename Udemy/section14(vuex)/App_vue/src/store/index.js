@@ -3,6 +3,9 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import count from './modules/count';
+import getters from './getters';
+import mutations from './mutations';
+import actions from './action';
 
 Vue.use(Vuex);
 
@@ -12,19 +15,18 @@ export default new Vuex.Store({
     message: ""
   },
   getters: {
-    message: state => state.message //何も加工してなくても、データの取得方法を統一するのもアリ。
+    //何も加工してなくても、データの取得方法を統一するのもアリ。
   },
   mutations: {
-    updateMessage(state, newMessage) {
-      state.message = newMessage
-    }
+
   },
   // 非同期処理がかける！！！
   actions: {
-    updateMessage({ commit }, newMessage) {
-      commit("updateMessage", newMessage);
-    }
+
   },
+  getters,
+  mutations,
+  actions,
   modules: {
     count
   }
