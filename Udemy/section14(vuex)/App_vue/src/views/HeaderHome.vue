@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex"
-
 export default {
   methods: {
-    ...mapMutations(["increment"])
+    increment() {
+      this.$store.dispatch("increment", 1) //incrementに1が渡って、actionが実行されて、その中でcommitが実行される。
+    }
   }
 }
 </script>

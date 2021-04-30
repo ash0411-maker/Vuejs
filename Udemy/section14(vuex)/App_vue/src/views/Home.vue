@@ -4,6 +4,8 @@
     <hr>
     <h2>Vuex: {{ doubleCount }}</h2>
     <h2>Vuex: {{ tripleCount }}</h2>
+    <input type="text" v-model="message">
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -12,7 +14,15 @@ import { mapGetters } from "vuex"
 
 export default {
   computed: {
-    ...mapGetters(["doubleCount", "tripleCount"])
+    ...mapGetters(["doubleCount", "tripleCount"]),
+    message: {
+      get() {
+        return this.$store.getters.message;
+      },
+      set(value) {
+        this.$store.dispatch("updateMessage", value)
+      },
+    }
   },
   methods: {
     toUsers() {
